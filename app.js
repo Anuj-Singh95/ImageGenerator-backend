@@ -16,7 +16,7 @@ app.use(express.json());
 // );
 
 const corsOptions = {
-  origin: "https://image-generator-ogld.onrender.com",
+  origin: "https://image-generator-frontend-ten.vercel.app",
   credentials: true,
 };
 // Enable CORS pre-flight across all routes
