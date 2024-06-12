@@ -24,13 +24,21 @@ app.use(express.json());
 // // Enable CORS for all routes
 // app.use(cors(corsOptions));
 
+// const corsOptions = {
+//   origin: "https://image-generator-frontend-ten.vercel.app",
+//   credentials: true,
+// };
+// // Enable CORS pre-flight across all routes
+// app.options("*", cors(corsOptions));
+// // Enable CORS for all routes
+// app.use(cors(corsOptions));
+
+// Configure CORS options
 const corsOptions = {
-  origin: "https://image-generator-frontend-ten.vercel.app",
-  credentials: true,
+  origin: true, // Reflect the request origin in the CORS response
+  credentials: true, // Allow credentials (cookies) to be sent
 };
-// Enable CORS pre-flight across all routes
-app.options("*", cors(corsOptions));
-// Enable CORS for all routes
+
 app.use(cors(corsOptions));
 
 app.use("/api/v1", UserRouter);
