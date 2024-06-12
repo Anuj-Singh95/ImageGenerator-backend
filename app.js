@@ -15,6 +15,15 @@ app.use(express.json());
 //   })
 // );
 
+// const corsOptions = {
+//   origin: "https://image-generator-frontend-ten.vercel.app",
+//   credentials: true,
+// };
+// // Enable CORS pre-flight across all routes
+// app.options("*", cors(corsOptions));
+// // Enable CORS for all routes
+// app.use(cors(corsOptions));
+
 const corsOptions = {
   origin: "https://image-generator-frontend-ten.vercel.app",
   credentials: true,
