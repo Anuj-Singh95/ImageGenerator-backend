@@ -24,7 +24,8 @@ const sendToken = (user, status, res) => {
     //   user,
     //   token,
     // });
-    res.cookie("token", token, options).json({
+    res.cookie("token", token, options);
+    res.status(status).json({
       success: true,
       user,
       token,
