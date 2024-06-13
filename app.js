@@ -36,8 +36,8 @@ app.use(express.json());
 // Configure CORS options
 const corsOptions = {
   origin: "https://image-generator-frontend-ten.vercel.app",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"],
+  // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  // allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true, // Allow cookies
 };
 
