@@ -14,12 +14,12 @@ const sendToken = (user, status, res) => {
     });
 
     const options = {
-      // expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-      // httpOnly: true,
+      expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+      httpOnly: true,
       secure: true,
       sameSite: "none",
       path: "/",
-      domain: "https://imagegenerator-backend-rw4f.onrender.com",
+      domain: "https://image-generator-frontend-ten.vercel.app/",
     };
 
     // res.status(status).cookie("token", token, options).json({
