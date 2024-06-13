@@ -18,6 +18,8 @@ const sendToken = (user, status, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "none",
+      path: "/",
+      domain: "https://image-generator-frontend-ten.vercel.app/",
     };
 
     // res.status(status).cookie("token", token, options).json({
