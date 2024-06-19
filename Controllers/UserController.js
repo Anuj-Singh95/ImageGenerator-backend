@@ -13,21 +13,21 @@ const sendToken = (user, status, res) => {
       expiresIn: "24h",
     });
 
-    const options = {
-      expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      path: "/",
-      // domain: ".vercel.app",
-    };
+    // const options = {
+    //   expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+    //   httpOnly: true,
+    //   secure: true,
+    //   sameSite: "none",
+    //   path: "/",
+    //   // domain: ".vercel.app",
+    // };
 
     // res.status(status).cookie("token", token, options).json({
     //   success: true,
     //   user,
     //   token,
     // });
-    res.cookie("token", token, options);
+    // res.cookie("token", token, options);
     res.status(status).json({
       success: true,
       user,
@@ -43,7 +43,7 @@ const sendToken = (user, status, res) => {
 
 const isAuthenticatedUser = async (req, res, next) => {
   try {
-    const { token } = req.cookies;
+    const { token } = req.header("token");
     if (!token) {
       return res.status(403).json({
         success: "false",
