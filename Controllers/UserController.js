@@ -19,7 +19,7 @@ const sendToken = (user, status, res) => {
       secure: true,
       sameSite: "none",
       path: "/",
-      domain: ".vercel.app",
+      // domain: ".vercel.app",
     };
 
     // res.status(status).cookie("token", token, options).json({
