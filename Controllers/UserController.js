@@ -43,7 +43,7 @@ const sendToken = (user, status, res) => {
 
 const isAuthenticatedUser = async (req, res, next) => {
   try {
-    const { token } = req.header("token");
+    const token = req.header("authToken");
     if (!token) {
       return res.status(403).json({
         success: "false",
