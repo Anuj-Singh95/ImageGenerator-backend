@@ -17,9 +17,9 @@ const sendToken = (user, status, res) => {
       expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
       httpOnly: true,
       secure: true,
-      sameSite: "None",
-      // path: "/",
-      // domain: "https://image-generator-frontend-ten.vercel.app",
+      sameSite: "none",
+      path: "/",
+      domain: ".vercel.app",
     };
 
     // res.status(status).cookie("token", token, options).json({
